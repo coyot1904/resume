@@ -6,6 +6,7 @@ const PFlatList = props => {
         style,
         data,
         renderItem,
+        horizontal,
     } = props;
     
     return (
@@ -13,6 +14,12 @@ const PFlatList = props => {
             keyExtractor={item => item.id}
             renderItem={renderItem}
             data={data}
+            {...horizontal === true ? horizontal : null}
+            horizontal
+            contentContainerStyle={{
+                flexDirection: 'column',
+                flexWrap: 'wrap'
+            }}
         />
     );
 };

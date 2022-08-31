@@ -45,6 +45,18 @@ export default Home = ( { navigation }) => {
       id: "3",
       title: "Third Item",
     },
+    {
+      id: "3",
+      title: "Third Item",
+    },
+    {
+      id: "3",
+      title: "Third Item",
+    },
+    {
+      id: "3",
+      title: "Third Item",
+    },
   ];
 
   const renderItem = ({ item }) => {
@@ -128,6 +140,7 @@ export default Home = ( { navigation }) => {
         <PFlatList
           data={DATA}
           renderItem={renderItem}
+          horizontal={true}
         />
       </View>
       <PModal 
