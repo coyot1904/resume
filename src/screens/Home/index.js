@@ -11,6 +11,7 @@ import PText from '../../component/Text';
 import PModal from '../../component/Modal';
 import PInput from '../../component/Input';
 import CustomButton from '../../utils/CustomButton';
+import PFlatList from '../../component/Flatlist';
 
 // styles
 import styles from './styles';
@@ -45,6 +46,15 @@ export default Home = ( { navigation }) => {
       title: "Third Item",
     },
   ];
+
+  const renderItem = ({ item }) => {
+    return(
+      <PText 
+        value={item.title}
+        style={styles.nameText}
+      />
+    );
+  };
 
   const schema = yup
   .object()
@@ -115,7 +125,10 @@ export default Home = ( { navigation }) => {
           value={'QUALIFICATION SUMMARY'}
           style={styles.skillText}
         />
-        <FlatList />
+        <PFlatList
+          data={DATA}
+          renderItem={renderItem}
+        />
       </View>
       <PModal 
         visible={modalVisible} 
