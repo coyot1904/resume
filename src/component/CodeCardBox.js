@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, FlatList, Image, View} from 'react-native';
 
 const PCodeCardBox = props => {
-  const {style, img, codinglang} = props;
+  const {img, codinglang} = props;
 
   return (
     <View style={style}>
